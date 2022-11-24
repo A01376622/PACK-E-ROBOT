@@ -15,14 +15,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/examen',consoleRoutes);
 
 app.get('/', (req, res) => {
-    // res.sendFile(path.join(__dirname, 'views', 'landing_page.html'))
-    res.sendFile(path.join(__dirname, 'views', 'dashboard.html'))
+    res.sendFile(path.join(__dirname, 'views', 'landing_page.html'))
+    // res.sendFile(path.join(__dirname, 'views', 'dashboard.html'))
 
 });
 
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'login.html'))
 });
+
+app.get('/dashboard', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'dashboard.html'))
+});
+
 
 //Lanzar la app
 app.listen(PORT,()=>{
