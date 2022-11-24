@@ -20,6 +20,10 @@ app.get('/', (req, res) => {
 
 });
 
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'login.html'))
+});
+
 //Lanzar la app
 app.listen(PORT,()=>{
     console.log("servidor en línea");
